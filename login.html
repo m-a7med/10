@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>A7MED_ASHRAF</title>
+
+<style>
+
+/* =========================
+   الأساسيات
+========================= */
+
+*{
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+    margin:0;
+}
+
+body{
+
+    font-family:
+        Tahoma,
+        Arial,
+        sans-serif;
+
+    background:
+        url(img/a7med.jpg)
+        no-repeat
+        center center;
+
+    background-size:cover;
+
+    background-attachment:fixed;
+
+    color:#fff;
+
+    overflow-x:hidden;
+}
+
+
+/* طبقة تعتيم بسيطة فوق الخلفية */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,0.38);
+
+    z-index:-1;
+}
+
+
+/* =========================
+   المحتوى
+========================= */
+
+.container{
+
+    width:100%;
+
+    max-width:600px;
+
+    margin:0 auto;
+
+    padding:
+        80px
+        25px
+        120px;
+
+    text-align:center;
+}
+
+
+/* =========================
+   اسم الكافيه
+========================= */
+
+.shop-name{
+
+    font-size:38px;
+
+    font-weight:bold;
+
+    color:#f1c46a;
+
+    margin-bottom:65px;
+
+    cursor:pointer;
+
+    text-shadow:
+
+        0 0 5px rgba(241,196,106,0.7),
+
+        0 3px 12px rgba(0,0,0,0.9);
+}
+
+
+/* =========================
+   الجملة
+========================= */
+
+.login-title{
+
+    font-size:27px;
+
+    font-weight:bold;
+
+    color:#ffffff;
+
+    margin-bottom:35px;
+
+    text-shadow:
+
+        0 3px 8px rgba(0,0,0,0.9);
+}
+
+
+/* =========================
+   نموذج الدخول
+========================= */
+
+.login-form{
+
+    width:100%;
+}
+
+
+/* =========================
+   خانة الكارت
+========================= */
+
+input{
+
+    width:100%;
+
+    height:70px;
+
+    padding:10px 25px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:40px;
+
+    background:#ffffff;
+
+    color:#555;
+
+    font-size:23px;
+
+    text-align:center;
+
+    font-family:Tahoma, Arial, sans-serif;
+
+    box-shadow:
+
+        0 5px 20px
+        rgba(0,0,0,0.35);
+}
+
+
+/* Placeholder */
+
+input::placeholder{
+
+    color:#777;
+
+    opacity:1;
+}
+
+
+/* عند الضغط */
+
+input:focus{
+
+    box-shadow:
+
+        0 0 0 3px
+        rgba(255,255,255,0.25),
+
+        0 5px 20px
+        rgba(0,0,0,0.45);
+}
+
+
+/* =========================
+   زر تسجيل الدخول
+========================= */
+
+.login-btn{
+
+    width:85%;
+
+    height:70px;
+
+    margin-top:50px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #1689f5,
+            #006de0
+        );
+
+    color:#ffffff;
+
+    font-size:25px;
+
+    font-weight:bold;
+
+    font-family:Tahoma, Arial, sans-serif;
+
+    cursor:pointer;
+
+    box-shadow:
+
+        0 5px 18px
+        rgba(0,0,0,0.4);
+
+    transition:0.2s;
+}
+
+
+/* تأثير الضغط */
+
+.login-btn:active{
+
+    transform:scale(0.97);
+}
+
+
+/* =========================
+   رسالة الخطأ
+========================= */
+
+.error{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:20px;
+
+    border-radius:15px;
+
+    background:rgba(220,30,30,0.85);
+
+    color:#fff;
+
+    font-size:15px;
+
+    box-shadow:
+
+        0 4px 12px
+        rgba(0,0,0,0.4);
+}
+
+
+/* =========================
+   الحقوق
+========================= */
+
+.footer{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:20px 10px;
+
+    text-align:center;
+
+    color:#ffffff;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    text-shadow:
+
+        0 2px 5px
+        rgba(0,0,0,0.9);
+
+    background:
+
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.55),
+            transparent
+        );
+
+    z-index:9999;
+
+    transition:none;
+}
+
+
+/* =========================
+   الموبايل
+========================= */
+
+@media(max-width:500px){
+
+    .container{
+
+        padding:
+            75px
+            20px
+            120px;
+    }
+
+    .shop-name{
+
+        font-size:34px;
+
+        margin-bottom:60px;
+    }
+
+    .login-title{
+
+        font-size:24px;
+
+        margin-bottom:30px;
+    }
+
+    input{
+
+        height:66px;
+
+        font-size:21px;
+    }
+
+    .login-btn{
+
+        width:82%;
+
+        height:66px;
+
+        font-size:23px;
+
+        margin-top:45px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     MikroTik CHAP LOGIN
+================================================== -->
+
+$(if chap-id)
+
+<form
+    name="sendin"
+    action="$(link-login-only)"
+    method="post"
+>
+
+    <input
+        type="hidden"
+        name="username"
+    >
+
+    <input
+        type="hidden"
+        name="password"
+    >
+
+    <input
+        type="hidden"
+        name="dst"
+        value="$(link-orig)"
+    >
+
+    <input
+        type="hidden"
+        name="popup"
+        value="true"
+    >
+
+</form>
+
+
+<script src="/md5.js"></script>
+
+
+<script>
+
+function doLogin(){
+
+    if(
+        document.login.username.value == ''
+    ){
+
+        document.login.username.value =
+            '$(mac)';
+
+        document.login.password.value =
+            '';
+
+    }
+
+
+    document.sendin.username.value =
+        document.login.username.value;
+
+
+    document.sendin.password.value =
+
+        hexMD5(
+
+            '$(chap-id)' +
+
+            document.login.password.value +
+
+            '$(chap-challenge)'
+
+        );
+
+
+    document.sendin.submit();
+
+
+    return false;
+}
+
+</script>
+
+$(endif)
+
+
+
+<!-- ==================================================
+     الصفحة
+================================================== -->
+
+<div class="container">
+
+
+    <!-- اسم الكافيه -->
+
+    <div
+        class="shop-name"
+        ondblclick="loginPWD()"
+    >
+
+        EL_WA7SH NET CAFE
+
+    </div>
+
+
+
+    <!-- رسالة الخطأ -->
+
+    $(if error)
+
+        <div class="error">
+
+            $(error)
+
+        </div>
+
+    $(endif)
+
+
+
+    <!-- عنوان الدخول -->
+
+    <div class="login-title">
+
+        يرجى إدخال رقم الكارت
+
+    </div>
+
+
+
+    <!-- نموذج تسجيل الدخول -->
+
+    <form
+        name="login"
+        class="login-form"
+
+        action="$(link-login-only)"
+
+        method="post"
+
+        $(if chap-id)
+        onSubmit="return doLogin()"
+        $(endif)
+    >
+
+
+        <!-- رقم الكارت -->
+
+        <input
+
+            type="text"
+
+            id="username"
+
+            name="username"
+
+            placeholder="رقم الكارت"
+
+            autocomplete="off"
+
+            inputmode="numeric"
+
+        >
+
+
+        <!-- كلمة المرور -->
+
+        <input
+
+            type="hidden"
+
+            id="password"
+
+            name="password"
+
+        >
+
+
+        <!-- زر الدخول -->
+
+        <button
+
+            type="submit"
+
+            class="login-btn"
+
+        >
+
+            تسجيل الدخول
+
+        </button>
+
+
+    </form>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     الحقوق
+================================================== -->
+
+<div class="footer" id="footer">
+
+    Eng / Ahmed Ashraf - WiFi Cards System
+
+    <br>
+
+    Tel / 01019728653
+
+</div>
+
+
+
+<script>
+
+/* =========================
+   الحصول على العنصر
+========================= */
+
+function _(el){
+
+    return document.getElementById(el);
+
+}
+
+
+/* =========================
+   الدخول Username / Password
+========================= */
+
+function loginPWD(){
+
+    _('password').type = 'password';
+
+    _('username').placeholder =
+        'Username';
+
+}
+
+
+/* =========================
+   Enter = تسجيل الدخول
+========================= */
+
+document
+    .getElementById('username')
+    .addEventListener(
+        'keydown',
+        function(event){
+
+            if(event.key === 'Enter'){
+
+                event.preventDefault();
+
+                document
+                    .querySelector('.login-btn')
+                    .click();
+
+            }
+
+        }
+    );
+
+
+/* ==================================================
+   التعامل مع كيبورد الموبايل
+================================================== */
+
+(function(){
+
+    const footer =
+        document.getElementById('footer');
+
+    const input =
+        document.getElementById('username');
+
+    if(!footer || !input){
+
+        return;
+
+    }
+
+
+    let startHeight =
+        window.innerHeight;
+
+
+    let keyboardOpened = false;
+
+
+    /*
+        نحدد ارتفاع الشاشة قبل فتح الكيبورد
+    */
+
+    function saveHeight(){
+
+        if(!keyboardOpened){
+
+            startHeight =
+                window.innerHeight;
+
+        }
+
+    }
+
+
+    /*
+        فحص حالة الكيبورد
+    */
+
+    function checkKeyboard(){
+
+        const currentHeight =
+            window.innerHeight;
+
+
+        const difference =
+            startHeight - currentHeight;
+
+
+        /*
+            لو حصل نقص كبير في ارتفاع الشاشة
+            نعتبر الكيبورد مفتوح
+        */
+
+        if(difference > 120){
+
+            if(!keyboardOpened){
+
+                keyboardOpened = true;
+
+                /*
+                    نخفي الحقوق خلف الكيبورد
+                    بدون تغيير أي شيء في الصفحة
+                */
+
+                footer.style.visibility =
+                    'hidden';
+
+            }
+
+        }
+
+        else{
+
+            if(keyboardOpened){
+
+                keyboardOpened = false;
+
+                /*
+                    عند إغلاق الكيبورد
+                    الحقوق ترجع فورًا
+                */
+
+                footer.style.visibility =
+                    'visible';
+
+                startHeight =
+                    window.innerHeight;
+
+            }
+
+        }
+
+    }
+
+
+    /*
+        قبل التركيز على خانة الكارت
+    */
+
+    input.addEventListener(
+        'focus',
+        function(){
+
+            setTimeout(
+                function(){
+
+                    startHeight =
+                        window.innerHeight;
+
+                },
+                300
+            );
+
+        }
+    );
+
+
+    /*
+        تغيير حجم الشاشة
+    */
+
+    window.addEventListener(
+        'resize',
+        function(){
+
+            checkKeyboard();
+
+        }
+    );
+
+
+    /*
+        بعض متصفحات أندرويد تستخدم visualViewport
+    */
+
+    if(window.visualViewport){
+
+        window.visualViewport.addEventListener(
+            'resize',
+            function(){
+
+                checkKeyboard();
+
+            }
+        );
+
+    }
+
+
+    /*
+        حفظ الارتفاع الأساسي
+    */
+
+    saveHeight();
+
+})();
+
+</script>
+
+
+</body>
+
+</html>
